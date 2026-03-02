@@ -36,6 +36,7 @@ save_iter_interval = 0
 save_time_interval = 0.0 # final_time / 5.0
 animate = true # Factor on save_iter_interval or save_time_interval
 compute_error_interval = 0
+cfl_safety_factor = 0.98
 diss = "2"
 #------------------------------------------------------------------------------
 grid_size = [nx, ny]
@@ -58,7 +59,7 @@ scheme = Scheme(solver, degree, solution_points, correction_function,
                 diss)
 param = Parameters(grid_size, cfl, bounds, save_iter_interval,
                    save_time_interval, compute_error_interval,
-                   animate = animate)
+                   animate = animate, cfl_safety_factor = cfl_safety_factor)
 #------------------------------------------------------------------------------
 # problem, scheme, param = ParseCommandLine(problem, param, scheme, equation,
 #                                           ARGS)

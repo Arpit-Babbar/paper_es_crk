@@ -56,8 +56,8 @@ end
 
 # Isentropic vortex
 
-final_time_global = 1.0
-volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_ranocha,
+final_time_global = 20 * sqrt(2.0) / 0.5
+volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_ranocha_turbo,
                                                         nothing))
 solver = cRK44(volume_integral)
 nx_array = [64, 128, 256, 512]
@@ -73,6 +73,7 @@ for (i, nx) in enumerate(nx_array)
                                 ny = nx, solution_points = "gll",
                                 correction_function = "g2",
                                 limiter = setup_limiter_none(),
+                                cfl_safety_factor = 0.5,
                                 bflux = evaluate)
         error_gll = sol_error(sol_gll)
         time_gll = sol_time(sol_gll)

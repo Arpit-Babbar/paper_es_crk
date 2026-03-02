@@ -178,18 +178,28 @@ end
 markers_for_curve = ["s", "^", "o", "*", "D"]
 colors_for_degree = ["orange", "royalblue", "green", "m", "c", "y", "k"]
 
-files_ion_gll = [joinpath(@__DIR__, "results",
+files_ion = [joinpath(@__DIR__, "results",
                       "multiion_convergence_gll$i.txt") for i in 1:3]
+files_isentropic = [joinpath(@__DIR__, "results",
+                             "isentropic_convergence_gll$i.txt") for i in 1:3]
 
 markers_arr = ["s", "s", "s"]
 colors_arr = ["orange", "royalblue", "green"]
 degrees_array = [1, 2, 3]
 output_dir = "."
 
-plot_python_ndofs_vs_y_degrees(files_ion_gll, ["Irrelevant"], degrees_array, markers_arr,
+plot_python_ndofs_vs_y_degrees(files_ion, ["Irrelevant"], degrees_array, markers_arr,
                                colors_arr, title = "GLL, \$g_2\$",
                                log_sub = "0.5",
                                theo_factor_even = 0.7, theo_factor_odd = 0.6,
                                figsize = (6.0, 7.0),
                                saveto = joinpath(output_dir, "convergence_ion_gll"),
+                               dim = 2)
+
+plot_python_ndofs_vs_y_degrees(files_isentropic, ["Irrelevant"], degrees_array, markers_arr,
+                               colors_arr, title = "GLL, \$g_2\$",
+                               log_sub = "0.5",
+                               theo_factor_even = 0.7, theo_factor_odd = 0.6,
+                               figsize = (6.0, 7.0),
+                               saveto = joinpath(output_dir, "convergence_isentropic_gll"),
                                dim = 2)
