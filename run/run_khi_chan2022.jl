@@ -1,5 +1,6 @@
 using Tenkai
 Eq = Tenkai.EqEuler2D
+using Tenkai.Trixi
 using StaticArrays
 #------------------------------------------------------------------------------
 xmin, xmax = -1.0, 1.0
@@ -8,7 +9,7 @@ ymin, ymax = -1.0, 1.0
 boundary_condition = (periodic, periodic, periodic, periodic)
 γ = 1.4
 
-volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_ranocha,
+volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_kennedy_gruber,
                                                         nothing))
 
 initial_value, exact_solution = Eq.kevin_helmholtz_schaal_data
@@ -46,7 +47,7 @@ bound_limit = "no"
 bflux = evaluate
 final_time = 15.0
 
-nx, ny = 32, 32
+nx, ny = 64, 64
 cfl = 0.0
 bounds = ([-Inf], [Inf]) # Not used in Euler
 save_iter_interval = 0

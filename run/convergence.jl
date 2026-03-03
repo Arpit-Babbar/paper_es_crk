@@ -1,3 +1,5 @@
+import Pkg
+Pkg.activate(@__DIR__)
 using Tenkai
 using Tenkai.TenkaicRK
 using Tenkai.TenkaicRK: PicardSolver
@@ -74,7 +76,7 @@ for (i, nx) in enumerate(nx_array)
                                 correction_function = "g2",
                                 limiter = setup_limiter_none(),
                                 cfl_safety_factor = 0.5,
-                                bflux = evaluate)
+                                bflux = extrapolate)
         error_gll = sol_error(sol_gll)
         time_gll = sol_time(sol_gll)
         array_gll[degree][i, 1:3] .= nx, error_gll, time_gll

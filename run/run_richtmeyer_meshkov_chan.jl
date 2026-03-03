@@ -44,7 +44,7 @@ initial_value = initial_condition_richtmeyer_meshkov
 exact_solution = boundary_condition_richtmeyer_meshkov
 degree = 3
 
-volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_ranocha,
+volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_kennedy_gruber,
                                                         nothing))
 
 solver = cRK44(volume_integral)
@@ -65,7 +65,7 @@ save_time_interval = final_time / 100.0
 animate = true # Factor on save_iter_interval or save_time_interval
 compute_error_interval = 0
 
-cfl_safety_factor = 0.1
+cfl_safety_factor = 0.5
 
 #------------------------------------------------------------------------------
 grid_size = [nx, ny]
@@ -76,7 +76,7 @@ limiter = setup_limiter_blend(blend_type = fo_blend(equation),
                               indicating_variables = Eq.rho_p_indicator!,
                               reconstruction_variables = conservative_reconstruction,
                               indicator_model = "gassner",
-                              amax = 0.0002, # Crashes with amax = 0.0001
+                              amax = 0.001, # Crashes with amax = 0.0009
                               debug_blend = false)
 # limiter = setup_limiter_none()
 scheme = Scheme(solver, degree, solution_points, correction_function,
