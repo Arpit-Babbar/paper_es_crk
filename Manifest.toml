@@ -2385,7 +2385,7 @@ version = "0.3.5"
 
 [[deps.Tenkai]]
 deps = ["Accessors", "DelimitedFiles", "DiffEqCallbacks", "ElasticArrays", "EllipsisNotation", "FLoops", "FastGaussQuadrature", "FileIO", "ForwardDiff", "GZip", "HDF5", "IterTools", "JSON3", "LinearAlgebra", "LoopVectorization", "MuladdMacro", "OffsetArrays", "OrdinaryDiffEqSSPRK", "OrdinaryDiffEqTsit5", "Plots", "Polyester", "Printf", "Roots", "SimpleNonlinearSolve", "SimpleUnPack", "StaticArrays", "TaylorDiff", "Test", "TimerOutputs", "TowerOfEnzyme", "Trixi", "TrixiBase", "UnPack", "WriteVTK"]
-git-tree-sha1 = "f80ec548853247f54e427693e32276265c00e182"
+git-tree-sha1 = "b9ed3320a2f2486f8e21342effce870f26313754"
 repo-rev = "master"
 repo-url = "https://github.com/Arpit-Babbar/Tenkai.jl"
 uuid = "a4f5eaf3-cc41-4395-bb6a-2b58fc770896"
