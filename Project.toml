@@ -1,2 +1,6 @@
 [deps]
+GZip = "92fee26a-97fe-5a0c-ad85-20a5f3185b63"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+SimpleUnPack = "ce78b400-467f-4804-87d8-8f486da07d0a"
 Tenkai = "a4f5eaf3-cc41-4395-bb6a-2b58fc770896"
+TrixiBase = "9a0f1c46-06d5-4909-a5a3-ce25d3fa3284"
