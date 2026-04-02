@@ -7,10 +7,10 @@ This repository contains information and code to reproduce the results
 presented in the article
 ```bibtex
 @online{babbar2026crkes,
-  title={Compact Runge-Kutta flux reconstruction methods with entropy conservative fluxes},
-  author={Babbar, Arpit and Ranocha, Hendrik and Chen, Qifan},
+  title={Compact Runge-Kutta flux reconstruction methods with entropy and/or kinetic energy preserving fluxes},
+  author={Babbar, Arpit and Chen, Qifan and Ranocha, Hendrik},
   year={2026},
-  month={3},
+  month={4},
   eprint={?},
   eprinttype={arxiv},
   eprintclass={math.NA}
@@ -22,8 +22,8 @@ If you use the implementations provided here, please **also** cite this reposito
 ```bibtex
 @misc{babbar2026crkes,
   title={Reproducibility repository for
-         "Compact Runge-Kutta flux reconstruction methods with entropy conservative fluxes"},
-  author={Babbar, Arpit and Ranocha, Hendrik and Chen, Qifan},
+         "Compact Runge-Kutta flux reconstruction methods with entropy and/or kinetic energy preserving fluxes"},
+  author={Babbar, Arpit and Chen, Qifan and Ranocha, Hendrik},
   year={2026},
   howpublished={\url{https://github.com/Arpit-Babbar/paper_crk_es}},
   doi={?}
@@ -32,7 +32,12 @@ If you use the implementations provided here, please **also** cite this reposito
 
 ## Abstract
 
-TODO
+Compact Runge-Kutta (cRK) methods are a class of high order methods for solving hyperbolic conservation laws characterized by their compact stencil including only immediate neighboring finite elements.
+A Compact Runge-Kutta flux reconstruction (cRKFR) method for solver hyperbolic conservation laws was introduced in [Babbar, A., Chen, Q., Journal of Scientific Computing, 2025] which uses a time average flux formulation to perform evolution using a single numerical flux computation at each step, making it a single stage method.
+Entropy or kinetic energy preserving numerical fluxes are often used for construction of high order entropy stable or kinetic energy preserving methods for hyperbolic conservation laws, and are known to enhance the robustness of numerical methods for under-resolved simulations.
+In this work, we show how these fluxes can be incorporated into the cRKFR framework for general hyperbolic equations that consist of fluxes and non-conservative products.
+We test the effectiveness of this new class of methods through numerical experiments for the compressible Euler equations, magnetohydronamics (MHD) equations and multi-ion MHD equations.
+It is observed that the application of entropy or kinetic energy preserving fluxes enhances the robustness of the cRKFR methods.
 
 ## Numerical experiments
 
@@ -66,8 +71,8 @@ All the figures are now ready and available in the home directory of the reposit
 ## Authors
 
 - [Arpit Babbar](https://babbar.dev) (Johannes Gutenberg University Mainz, Germany)
-- [Hendrik Ranocha](https://ranocha.de) (Johannes Gutenberg University Mainz, Germany)
 - [Qifan Chen](https://qifan-chen.github.io) (The Ohio State University, USA)
+- [Hendrik Ranocha](https://ranocha.de) (Johannes Gutenberg University Mainz, Germany)
 
 ## License
 
