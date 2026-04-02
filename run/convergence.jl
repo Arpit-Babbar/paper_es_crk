@@ -33,7 +33,7 @@ volume_integral = Trixi.VolumeIntegralFluxDifferencing((Trixi.flux_ruedaramirez_
 
 # Only cRK44 is implemented with the flux differencing volume integral
 degree2crk = Dict(1 => cRK44(volume_integral), 2 => cRK44(volume_integral), 3 => cRK44(volume_integral))
-#=
+
 for (i, nx) in enumerate(nx_array)
     for degree in 1:3
         trixi_include(run_file, solver = degree2crk[degree],
@@ -55,7 +55,6 @@ for degree in 1:3
     writedlm(joinpath(@__DIR__, "results", "multiion_convergence_gll$(degree).txt"),
              array_gll[degree])
 end
-=#
 # Isentropic vortex
 
 final_time_global = 20 * sqrt(2.0) / 0.5
