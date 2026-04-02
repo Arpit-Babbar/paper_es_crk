@@ -26,7 +26,7 @@ If you use the implementations provided here, please **also** cite this reposito
   author={Babbar, Arpit and Chen, Qifan and Ranocha, Hendrik},
   year={2026},
   howpublished={\url{https://github.com/Arpit-Babbar/paper_crk_es}},
-  doi={?}
+  doi={10.5281/zenodo.19388796}
 }
 ```
 
