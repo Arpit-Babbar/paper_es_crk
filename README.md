@@ -1,7 +1,7 @@
 # Compact Runge-Kutta flux reconstruction methods with entropy and/or kinetic energy preserving fluxes
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://zenodo.org/badge/DOI/?.svg)](https://zenodo.org/doi/10.5281/zenodo.19388796)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19388796.svg)](https://zenodo.org/doi/10.5281/zenodo.19388796)
 
 This repository contains information and code to reproduce the results
 presented in the article
