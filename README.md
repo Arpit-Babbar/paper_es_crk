@@ -11,9 +11,10 @@ presented in the article
   author={Babbar, Arpit and Chen, Qifan and Ranocha, Hendrik},
   year={2026},
   month={4},
-  eprint={?},
+  eprint={2604.02125},
   eprinttype={arxiv},
-  eprintclass={math.NA}
+  eprintclass={math.NA},
+  doi={10.48550/arXiv.2604.02125}
 }
 ```
 
